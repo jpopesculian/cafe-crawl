@@ -1,0 +1,13 @@
+.ErrorDialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 4em);
+  padding: 2em;
+}
+
+.ErrorMessage {
+  background: rgba(255, 100, 255, 0.8);
+  padding: 2em;
+  border-radius: 1em;
+}

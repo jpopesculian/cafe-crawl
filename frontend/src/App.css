@@ -1,0 +1,14 @@
+body {
+  color: #00f;
+  background: #f9dcf4;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 1em 2em;
+}
+
+.hidden {
+  display: none !important;
+}

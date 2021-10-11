@@ -15,7 +15,6 @@ function Map({ children, styleUrl, ...options }: Props) {
   const mapRef = useRef(null);
   const [map, setMap] = useState<mapbox.Map | null>(null);
 
-  // on component mount
   useEffect(() => {
     if (map) {
       return;

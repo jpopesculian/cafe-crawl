@@ -1,0 +1,54 @@
+.Admin {
+  height: 4em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.AdminPanel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+  flex-direction: column;
+}
+
+.AdminPanel .form {
+  padding: 1em 2em;
+  display: flex;
+}
+
+.AdminPanel .form input {
+  padding: 1em 2em;
+}
+
+.AdminPanel .form button {
+  margin-left: 1em;
+}
+
+.AdminPanel .FormNotifications {
+  padding: 1em 2em;
+}
+
+.AdminPanel .FormNotifications .success {
+  color: #0f0;
+}
+
+.AdminPanel .FormNotifications .error {
+  color: #f00;
+}
+
+.Admin .OpenAdminPanel {
+  color: #fff;
+}
+
+.Admin .CloseAdminPanel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}

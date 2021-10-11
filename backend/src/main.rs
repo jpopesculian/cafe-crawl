@@ -23,7 +23,7 @@ type Error = Box<dyn std::error::Error + Send + Sync + 'static>;
 #[serde(tag = "event")]
 enum Request {
     Login { password: String },
-    Update { token: String, value: usize },
+    Update { token: String, value: f32 },
     Read,
 }
 
@@ -34,8 +34,8 @@ enum Response {
     LoginSucceeded { token: String },
     LoginFailed,
     Unauthorized,
-    ValueUpdated { value: usize },
-    ValueRead { value: usize },
+    ValueUpdated { value: f32 },
+    ValueRead { value: f32 },
 }
 
 #[derive(Clone, Debug, Error)]
@@ -96,7 +96,7 @@ fn check_jwt(
     Ok(valid)
 }
 
-async fn update_value(value: usize) -> Result<(), Error> {
+async fn update_value(value: f32) -> Result<(), Error> {
     let client = DynamoDbClient::new(Region::EuCentral1);
     let mut item = HashMap::new();
     item.insert(
@@ -123,7 +123,7 @@ async fn update_value(value: usize) -> Result<(), Error> {
     Ok(())
 }
 
-async fn get_value() -> Result<usize, Error> {
+async fn get_value() -> Result<f32, Error> {
     let client = DynamoDbClient::new(Region::EuCentral1);
     let mut key = HashMap::new();
     key.insert(
