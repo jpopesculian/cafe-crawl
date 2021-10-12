@@ -1,0 +1,56 @@
+.Header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.HeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  width: 15em;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-item {
+  padding: 0.5em 2em;
+}
+
+.nav-item a {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  text-shadow: 0.5em 0.5em 0.5em #951997;
+  transition: all 0.2s;
+}
+
+.nav-item a:hover {
+  top: -0.2em;
+  text-shadow: 0.5em 0.7em 0.7em #951997;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-items {
+    display: block;
+  }
+  .nav-item {
+    padding-right: 0;
+    padding-left: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .HeaderContent {
+    display: block;
+  }
+  .nav-item {
+    padding-left: 0;
+  }
+} ;

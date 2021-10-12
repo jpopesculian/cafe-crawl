@@ -16,7 +16,6 @@ function Head() {
   const state = useContext(StateContext);
 
   useEffect(() => {
-    console.log(state.value);
     fetch(`./head${state.value}.png`)
       .then((res) => res.blob())
       .then((blob) => blobToBase64(blob))

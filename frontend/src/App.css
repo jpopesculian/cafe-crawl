@@ -9,6 +9,32 @@ button {
   padding: 1em 2em;
 }
 
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+
+a {
+  text-decoration: none;
+  color: #da00ff;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.4em;
+}
+
 .hidden {
   display: none !important;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 2em;
+  width: 100%;
+  max-width: 60em;
 }
