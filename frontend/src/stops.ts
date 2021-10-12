@@ -47,14 +47,14 @@ export const STOPS: Stop[] = [
   {
     name: "K'mik",
     start_time: "16:15",
-    stop_time: "17:30",
+    stop_time: "16:55",
     google_maps: "https://g.page/kaffemik_vie?share",
     lat_lng: [16.3510865157843, 48.1992539964285728],
   },
   {
     name: "Schadek",
     notes: "Liebling 2",
-    start_time: "17:35",
+    start_time: "17:00",
     stop_time: "18:15",
     google_maps: "https://goo.gl/maps/FpPuXGZUVNZaGr4U6",
     lat_lng: [16.35268826975328, 48.198305514769727],

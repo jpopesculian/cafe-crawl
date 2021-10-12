@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import StateContext, { State } from "./StateContext";
 import "./StateProvider.css";
 import * as api from "./api";
@@ -44,9 +44,9 @@ function StateProvider({ children }: Props) {
       .finally(() => {
         setTimeout(() => {
           setReqState(RequestState.Ready);
-        }, 5000);
+        }, 30000);
       });
-  }, [state, reqState]);
+  }, [state, reqState, error]);
 
   return (
     <StateContext.Provider value={state}>

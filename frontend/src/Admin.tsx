@@ -30,7 +30,7 @@ function Admin() {
       return;
     }
     let newValue = state.value.toString();
-    if (newValue != value.value) {
+    if (newValue !== value.value) {
       setValue({ value: newValue, auto: true });
     }
   }, [state, value]);

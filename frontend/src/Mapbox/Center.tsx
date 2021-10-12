@@ -13,7 +13,7 @@ const Center = ({ lat_lng }: Props) => {
     if (!map) return;
     if (!isAuto) return;
     map.easeTo({ center: lat_lng });
-  }, [map, lat_lng]);
+  }, [map, lat_lng, isAuto]);
 
   useEffect(() => {
     if (!map) return;

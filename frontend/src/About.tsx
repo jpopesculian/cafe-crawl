@@ -21,7 +21,10 @@ function About() {
         enemies, whoever. whatever you want, i just wanna see your lovely faces
         if you have time.
       </p>
-      <img src="https://media.giphy.com/media/l1IY8onMgFEotIzew/giphy.gif" />
+      <img
+        src="https://media.giphy.com/media/l1IY8onMgFEotIzew/giphy.gif"
+        alt="good cup of coffee"
+      />
     </div>
   );
 }

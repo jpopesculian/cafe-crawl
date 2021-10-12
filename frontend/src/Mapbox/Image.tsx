@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import MapContext from "./MapContext";
 import { GeoJSONSource } from "mapbox-gl";
 
@@ -66,7 +66,7 @@ const Image = ({ src, img_id, lat_lng }: Props) => {
     }
   }, [map, src, img_id, lat_lng, imgRef]);
 
-  return <img src={src} ref={imgRef} />;
+  return <img src={src} ref={imgRef} alt="map icon" />;
 };
 
 export default Image;
