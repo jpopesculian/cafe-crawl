@@ -16,7 +16,6 @@ const Image = ({ src, img_id, lat_lng }: Props) => {
     if (!map) return;
     if (!imgRef.current) return;
     if (!map.hasImage(img_id)) {
-      console.log(img_id);
       map.addImage(img_id, imgRef.current);
       map.addSource(`${img_id}-point`, {
         type: "geojson",

@@ -22,13 +22,14 @@ function Map({ children, styleUrl, ...options }: Props) {
     if (!mapRef.current) {
       return;
     }
-    setMap(
-      new mapbox.Map({
-        container: mapRef.current,
-        style: styleUrl,
-        ...options,
-      })
-    );
+    const newMap = new mapbox.Map({
+      container: mapRef.current,
+      style: styleUrl,
+      ...options,
+    });
+    newMap.on("styledata", () => {
+      setMap(newMap);
+    });
   }, [mapRef, map, styleUrl, options]);
 
   return (
